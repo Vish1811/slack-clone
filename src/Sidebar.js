@@ -14,11 +14,11 @@ import ExpandLessicon from "@material-ui/icons/ExpandLess";
 import ExpandMoreicon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import db from './firebase';
-import { useStatevalue } from './Stateprovider';
+import { useStateValue } from './Stateprovider';
 
 function Sidebar() {
     const [channels,setChannels] = useState([]);
-    const [{user}] = userStateValue();
+    const [{user}] = useStateValue();
     useEffect(() => {
         db.collection('rooms').onSnapshot((snapshot) =>{
             setChannels(
