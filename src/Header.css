@@ -35,6 +35,7 @@ margin-right: 30px;
     border: none;
     text-align: center;
     min-width: 35vw;
+    color: white;
 }
 .header__right{
     flex: 0.3;
